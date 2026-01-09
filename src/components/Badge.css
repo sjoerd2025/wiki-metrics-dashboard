@@ -1,0 +1,97 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.badge-small {
+  padding: 4px 8px;
+  font-size: 11px;
+  gap: 4px;
+}
+
+.badge-small .badge-icon {
+  font-size: 14px;
+}
+
+.badge-medium {
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+.badge-medium .badge-icon {
+  font-size: 16px;
+}
+
+.badge-large {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.badge-large .badge-icon {
+  font-size: 20px;
+}
+
+.badge-gold {
+  background-color: rgba(255, 215, 0, 0.15);
+  border-color: var(--gold);
+  color: #ffd700;
+}
+
+.badge-silver {
+  background-color: rgba(192, 192, 192, 0.15);
+  border-color: var(--silver);
+  color: #c0c0c0;
+}
+
+.badge-bronze {
+  background-color: rgba(205, 127, 50, 0.15);
+  border-color: var(--bronze);
+  color: #cd7f32;
+}
+
+.badge-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge-name {
+  white-space: nowrap;
+}
+
+.badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.badge-remaining {
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .badge {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+  
+  .badge-icon {
+    font-size: 14px;
+  }
+}
+

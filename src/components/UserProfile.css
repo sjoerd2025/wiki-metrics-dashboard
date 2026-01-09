@@ -1,0 +1,322 @@
+.user-profile {
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.profile-loading,
+.profile-error {
+  padding: 40px;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.profile-header {
+  position: relative;
+  padding: 32px;
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.close-button:hover {
+  background: var(--bg-hover);
+}
+
+.profile-hero {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid var(--border-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-name {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.profile-username {
+  font-size: 18px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.profile-join-date {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.badges-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.profile-badges h3 {
+  font-size: 16px;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.linkedin-share-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #0077b5;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.2s, transform 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 119, 181, 0.3);
+}
+
+.linkedin-share-btn:hover {
+  background: #006399;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 119, 181, 0.4);
+}
+
+.linkedin-share-btn:active {
+  transform: translateY(0);
+}
+
+.linkedin-icon {
+  background: white;
+  color: #0077b5;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  padding: 24px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.stat-card {
+  background: var(--bg-tertiary);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.stat-card.highlight {
+  background: linear-gradient(135deg, #5cb85c 0%, #4a9d4a 100%);
+  color: white;
+  border: none;
+}
+
+.stat-icon {
+  font-size: 32px;
+}
+
+.stat-content {
+  flex: 1;
+}
+
+.stat-value {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-card.highlight .stat-label {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.profile-charts {
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 24px;
+}
+
+.chart-container {
+  background: var(--bg-tertiary);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.chart-container h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.recent-wikis {
+  padding: 24px;
+  border-top: 1px solid var(--border-color);
+}
+
+.recent-wikis h3 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.wiki-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.wiki-item {
+  background: var(--bg-tertiary);
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.wiki-item:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 2px 8px rgba(92, 184, 92, 0.3);
+  background: var(--bg-hover);
+}
+
+.wiki-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 8px;
+}
+
+.wiki-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin: 0;
+}
+
+.wiki-date {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.wiki-stats {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 13px;
+}
+
+.wiki-stat {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.wiki-stat-icon {
+  font-size: 14px;
+}
+
+.wiki-stat-secondary {
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .profile-header {
+    padding: 20px;
+  }
+
+  .profile-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .profile-name {
+    font-size: 24px;
+  }
+
+  .badges-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .linkedin-share-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .profile-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-charts {
+    grid-template-columns: 1fr;
+  }
+}
+

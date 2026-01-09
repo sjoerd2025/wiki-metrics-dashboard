@@ -1,0 +1,280 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  animation: slideUp 0.3s ease-out;
+  border: 1px solid var(--border-color);
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.modal-header h2 {
+  font-size: 20px;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+}
+
+.linkedin-logo {
+  background: #0077b5;
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.modal-close:hover {
+  background-color: var(--bg-light);
+}
+
+.modal-body {
+  padding: 24px;
+}
+
+.preview-section {
+  margin-bottom: 24px;
+}
+
+.preview-section h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.post-preview {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px;
+  background: var(--bg-light);
+}
+
+.preview-header {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.preview-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.preview-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+.preview-meta {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.preview-text {
+  white-space: pre-wrap;
+  line-height: 1.6;
+  color: var(--text-primary);
+  font-size: 14px;
+  margin-bottom: 16px;
+  padding: 12px;
+  background: white;
+  border-radius: 6px;
+}
+
+.preview-stats {
+  display: flex;
+  gap: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-color);
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.preview-stats span {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.preview-stats span:hover {
+  color: var(--text-primary);
+}
+
+.info-section {
+  background: #fff9e6;
+  border: 1px solid #ffcc01;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.info-text {
+  font-size: 14px;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.info-list {
+  margin: 12px 0;
+  padding-left: 24px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.info-list li {
+  margin-bottom: 6px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 20px 24px;
+  border-top: 1px solid var(--border-color);
+  background: var(--bg-light);
+}
+
+.btn-cancel,
+.btn-share {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.btn-cancel {
+  background: white;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.btn-cancel:hover {
+  background: var(--bg-light);
+}
+
+.btn-share {
+  background: #0077b5;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-share:hover {
+  background: #006399;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 119, 181, 0.3);
+}
+
+.linkedin-icon {
+  background: white;
+  color: #0077b5;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    max-height: 95vh;
+  }
+  
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    padding: 16px;
+  }
+  
+  .preview-stats {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .modal-footer {
+    flex-direction: column;
+  }
+  
+  .btn-cancel,
+  .btn-share {
+    width: 100%;
+    justify-content: center;
+  }
+}
+

@@ -1,0 +1,184 @@
+.leaderboard {
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.leaderboard-header {
+  padding: 24px;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-tertiary);
+}
+
+.leaderboard-header h2 {
+  font-size: 24px;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+}
+
+.leaderboard-subtitle {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.leaderboard-table-container {
+  overflow-x: auto;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leaderboard-table thead {
+  background-color: var(--bg-tertiary);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.leaderboard-table th {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.leaderboard-table th.sortable {
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s;
+  position: relative;
+}
+
+.leaderboard-table th.sortable:hover {
+  background-color: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.leaderboard-table th.sortable.active {
+  color: var(--secondary-color);
+}
+
+.sort-indicator {
+  margin-left: 4px;
+  font-size: 10px;
+}
+
+.leaderboard-table tbody tr {
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.2s;
+}
+
+.leaderboard-table tbody tr:hover {
+  background-color: var(--bg-hover);
+  cursor: pointer;
+}
+
+.leaderboard-table td {
+  padding: 16px;
+  font-size: 14px;
+}
+
+.rank-column {
+  width: 80px;
+  text-align: center;
+}
+
+.rank {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.user-column {
+  min-width: 200px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.user-username {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.metric-cell {
+  text-align: center;
+  font-weight: 500;
+}
+
+.metric-value {
+  color: var(--text-primary);
+}
+
+.engagement-score {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.badges-column {
+  min-width: 200px;
+}
+
+.loading-cell {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 1024px) {
+  .leaderboard-table th,
+  .leaderboard-table td {
+    padding: 12px 8px;
+    font-size: 13px;
+  }
+  
+  .user-avatar {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .leaderboard-header {
+    padding: 16px;
+  }
+  
+  .leaderboard-header h2 {
+    font-size: 20px;
+  }
+  
+  .badges-column {
+    display: none;
+  }
+  
+  .leaderboard-table th,
+  .leaderboard-table td {
+    padding: 8px 4px;
+    font-size: 12px;
+  }
+}
+
